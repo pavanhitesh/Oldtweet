@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "components": [
+      {
+        "name": "xray-automation-poc"
+      }
+    ],
+    "fixVersions": [
+      {
+        "name": "xray-automation-poc"
+      }
+    ]
+  }
+}

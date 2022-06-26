@@ -1,0 +1,7 @@
+{
+  "cucumberautocomplete.steps": [
+    "./packages/*/e2e/**/*.steps.ts",
+  ],
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "editor.bracketPairColorization.enabled": true
+}

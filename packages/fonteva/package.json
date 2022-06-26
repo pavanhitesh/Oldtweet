@@ -1,0 +1,49 @@
+{
+  "name": "@tweet/fonteva",
+  "version": "1.0.0",
+  "description": "An E2E Test Automation Framework for $npm_package_name",
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx shx rm -rf tmp node_modules",
+    "del:reports": "npx shx rm -rf tmp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "echo Hey there! Im printing from $npm_package_name",
+    "bootstrap": "npx lerna bootstrap --hoist && npx shx rm -rf node_modules",
+    "bdd:web:local:chrome": "npm run del:reports && cross-env TEAM=fonteva WHERE=local BROWSER=chrome npx wdio wdio.web-local.conf.ts",
+    "bdd:web:local:firefox": "npm run del:reports && cross-env TEAM=fonteva WHERE=local BROWSER=firefox npx wdio wdio.web-local.conf.ts",
+    "bdd:web:local:edge": "npm run del:reports && cross-env TEAM=fonteva WHERE=local BROWSER=MicrosoftEdge npx wdio wdio.web-local.conf.ts",
+    "bdd:web:local:safari": "npm run del:reports && cross-env TEAM=fonteva WHERE=local BROWSER=safari npx wdio wdio.web-local.conf.ts",
+    "bdd:web:container:chrome": "npm run del:reports && cross-env TEAM=fonteva WHERE=container BROWSER=chrome npx wdio wdio.web-container.conf.ts",
+    "bdd:web:container:firefox": "npm run del:reports && cross-env TEAM=fonteva WHERE=container BROWSER=firefox npx wdio wdio.web-container.conf.ts",
+    "bdd:web:container:edge": "npm run del:reports && cross-env TEAM=fonteva WHERE=container BROWSER=MicrosoftEdge npx wdio wdio.web-container.conf.ts",
+    "bdd:web:container:safari": "npm run del:reports && cross-env TEAM=fonteva WHERE=container BROWSER=safari npx wdio wdio.web-container.conf.ts",
+    "bdd:web:bs:chrome": "npm run del:reports && cross-env TEAM=fonteva WHERE=browserstack BROWSER=chrome npx wdio wdio.web-browserstack.conf.ts",
+    "bdd:web:bs:firefox": "npm run del:reports && cross-env TEAM=fonteva WHERE=browserstack BROWSER=firefox npx wdio wdio.web-browserstack.conf.ts",
+    "bdd:web:bs:edge": "npm run del:reports && cross-env TEAM=fonteva WHERE=browserstack BROWSER=MicrosoftEdge npx wdio wdio.web-browserstack.conf.ts",
+    "bdd:web:bs:safari": "npm run del:reports && cross-env TEAM=fonteva WHERE=browserstack BROWSER=safari npx wdio wdio.web-browserstack.conf.ts"
+  },
+  "devDependencies": {},
+  "files": [
+    "/e2e/*",
+    "/pages/*",
+    "/shared/*",
+    "/types",
+    ".npmrc",
+    "wdio.conf.ts",
+    "tsconfig.json"
+  ],
+  "license": "UNLICENSED",
+  "author": "Automation Excellence (AX) Team",
+  "keywords": [
+    "e2e",
+    "automation",
+    "framework",
+    "together-works",
+    "fonteva",
+    "e2e-test-automation"
+  ],
+  "contributors": [
+    "Shirish Munukuntla <smunukuntla@togetherwork.com>"
+  ]
+}

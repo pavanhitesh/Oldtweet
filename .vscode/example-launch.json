@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "protocol": "legacy",
+      "port": 5859,
+      "name": "Launch",
+      "runtimeExecutable": "/Users/shirish.munukuntla/.volta/bin/node",
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal",
+      "env": { "TEAM": "fonteva", "WHERE": "local", "BROWSER": "chrome", "DEBUGTIMEOUT": "86400000" },
+      "args": [
+        "node_modules/.bin/wdio",
+        "packages/fonteva/wdio.web-local.conf.ts",
+        "--spec=packages/fonteva/e2e/features/PD-26919.feature"
+      ]
+    }
+  ]
+}

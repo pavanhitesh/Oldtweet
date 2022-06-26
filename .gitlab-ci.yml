@@ -1,0 +1,43 @@
+default:
+  image: node:14.17.0
+
+stages:          # List of stages for jobs, and their order of execution
+  - setup_lint
+
+# code-checkout-job:       # This job runs in the build stage, which runs first.
+#   stage: checkout
+#   script:
+#     - echo "checking out source code from master"
+#     - git clone --no-checkout git@gitlab.com:togetherwork/automation/tweet.git
+#     - git sparse-checkout init --cone
+#     - git checkout master
+#     - git sparse-checkout set packages/* .husky .vscode globals
+#     - echo "checkout complete.
+
+setup-project-and-lint:   # This job runs in the test stage.
+  stage: setup_lint    # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "project setup started"
+    - npm run setup
+    - npm run lint
+    - npm run hello
+    #- npx lerna run --scope="@tweet/fonteva" bdd:web:local:chrome -- -- --spec="""PD-27002.feature"""
+    - echo "project setup completed"
+
+# lint-check-job:   # This job also runs in the test stage.
+#   stage: checks    # It can run at the same time as unit-test-job (in parallel).
+#   dependencies:
+#    - setup-project-job
+#   script:
+#     - echo "lint checks started"
+#     - npm run lint
+#     - echo "No lint issues found."
+
+# health-check-job:      # This job runs in the deploy stage.
+#   stage: checks  # It only runs when *both* jobs in the test stage complete successfully.
+#   dependencies:
+#    - setup-project-job
+#   script:
+#     - echo "health checks started"
+#     - npm run hello
+#     - echo "project health is good"

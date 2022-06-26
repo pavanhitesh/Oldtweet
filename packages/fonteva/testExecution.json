@@ -1,0 +1,21 @@
+{
+  "fields": {
+    "project": {
+      "key": "PD"
+    },
+    "summary": "Test Execution for cucumber Execution",
+    "issuetype": {
+      "id": "10143"
+    },
+    "components": [
+      {
+        "name": "xray-automation-poc"
+      }
+    ],
+    "fixVersions": [
+      {
+        "name": "xray-automation-poc"
+      }
+    ]
+  }
+}

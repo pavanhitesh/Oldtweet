@@ -1,0 +1,15 @@
+{
+  "ContactName": "Max Foxworth",
+  "TaxClassProvince": "CA",
+  "Adddress": {
+    "OrderApi__Name__c": "Test AutoAddress",
+    "OrderApi__Street__c": "123 South Main Street",
+    "OrderApi__City__c": "Los Angeles",
+    "OrderApi__Province__c": "CA",
+    "OrderApi__Country__c": "US",
+    "OrderApi__Postal_Code__c": "90012",
+    "OrderApi__Type__c": "Home",
+    "OrderApi__Is_Default__c": true,
+    "OrderApi__Contact__c": "<UpdateContactId>"
+  }
+}

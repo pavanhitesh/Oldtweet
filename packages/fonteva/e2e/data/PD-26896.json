@@ -1,0 +1,37 @@
+{
+  "soql": {
+    "bussinessGroupId": "SELECT Id from OrderApi__Business_Group__c where Name = 'Foundation'",
+    "itemClassId": "SELECT Id from OrderApi__Item_Class__c where Name = 'Merchandise Class'",
+    "taxClassId": "SELECT Id from OrderApi__Item_Class__c where Name = 'Tax Class'"
+  },
+  "delete_KnowAddress": "SELECT Id FROM OrderApi__Known_Address__c WHERE OrderApi__Contact__c in (SELECT Id FROM Contact where Name = '{contactName}')",
+  "createSourceCode": {
+    "Name": "FreeSource",
+    "OrderApi__Channel__c": "Website",
+    "OrderApi__Active__c": true,
+    "OrderApi__Business_Group__c": "Foundation"
+  },
+  "createItem": {
+    "Name": "SampleTaxItem",
+    "OrderApi__Business_Group__c": "SELECT Id from OrderApi__Business_Group__c where Name = 'Foundation'",
+    "OrderApi__Price__c": "100",
+    "OrderApi__Item_Class__c": "SELECT Id from OrderApi__Item_Class__c where Name = 'Merchandise Class'",
+    "OrderApi__Is_Active__c": true,
+    "OrderApi__Is_Taxable__c": true,
+    "OrderApi__Tax_Class__c": "SELECT Id from OrderApi__Item_Class__c where Name = 'Tax Class'"
+  },
+  "catalogId": "SELECT Id FROM OrderApi__Catalog__c WHERE Name = '{catalog}'",
+  "createCatalogItem": {
+    "OrderApi__Catalog__c": "a0w5e000000EVrtAAG",
+    "OrderApi__Item__c": "a1B5e000000OGRsEAO",
+    "OrderApi__Is_Published__c": "true"
+  },
+  "managePriceRule": {
+    "Name": "New_PriceRule_Zero",
+    "OrderApi__Item__c": "a1B5e000000OGRsEAO",
+    "OrderApi__Price__c": 0,
+    "OrderApi__Is_Active__c": true,
+    "OrderApi__Required_Source_Codes__c": "a1W5e000000MtnDEAS"
+  },
+  "communitySiteURL": "SELECT LTE__Site_URL__c FROM LTE__Site__c where Name = 'LTCommunitySite'"
+}

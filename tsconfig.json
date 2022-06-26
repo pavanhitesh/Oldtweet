@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "commonjs",
+    "outDir": "./.build/",
+    "removeComments": true,
+    "strict": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "webdriverio",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "@wdio/cucumber-framework",
+      "expect-webdriverio",
+      "@cucumber/cucumber",
+      "@wdio/shared-store-service"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
